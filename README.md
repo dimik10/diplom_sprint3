@@ -41,7 +41,7 @@ node-exporter
 loki
 
 - Уставнавливаем через docker-compose это всё на srv-0 ноду для мониторинга.
-клонируем репозиторий  (git clone https://github.com/dimik10/diplom_sprint3)и запускаем.
+клонируем репозиторий  (git clone https://github.com/dimik10/diplom_sprint3) и запускаем.
 
 docker compose up -d 
 
