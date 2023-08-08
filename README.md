@@ -46,19 +46,19 @@ loki
 docker compose up -d 
 
 - Устанавливаем Loki в кластер k8s из helm chart:
-  ```
+
   helm repo add bitnami https://charts.bitnami.com/bitnami -n monitoring 
   helm repo update
   helm install --namespace monitoring loki bitnami/grafana-loki --set global.dnsService=coredns --set spec.type=NodePort --set loki.auth_enabled=false
-  ```
+
 - Подключаем всё к Grafana.
 из общего репозитория на сайте выбираем нужные дашборды.
 https://grafana.com/grafana/dashboards/1860-node-exporter-full/
 https://grafana.com/grafana/dashboards/7587-prometheus-blackbox-exporter/
 https://grafana.com/grafana/dashboards/13639-logs-app/
 Адрес сервера графана:
-  ```
-  http://158.160.64.45:3000/
-  ```
+
+http://158.160.64.45:3000/
+
 - В docker-compouse.yaml файле на сервере srv вносим свои данные телеграмм, перезапускаем контейнер и моделируем срабатывание аллерта.
  либо отправляем письмо.
