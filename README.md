@@ -27,18 +27,19 @@
 4. Алертинг.
 
 теперь добавим уведомления в наш любимый мессенджер, точнее в ваш любимый мессенджер. 
-Лучше в почту)
+
 ```
 
 РЕШЕНИЕ
 
 - Стек использования:
-Prometheus
-Grafana
-Blackbox
-Alertmanager
-node-exporter
-loki
+
+Prometheus,
+Grafana,
+Blackbox,
+Alertmanager,
+node-exporter,
+loki.
 
 - Уставнавливаем через docker-compose это всё на srv-0 ноду для мониторинга.
 клонируем репозиторий  (git clone https://github.com/dimik10/diplom_sprint3) и запускаем.
@@ -47,9 +48,10 @@ docker compose up -d
 
 - Для мониторинга кластера k8s буду использовать проверенное решение на бaзе node-exporter т.к. оно легко 
 интегрируется в существующую концепцию. Отдельно прописываю только адреса node-exporter.
-- Клонируем репозиторий  (git clone https://github.com/dimik10/diplom_sprint3) и переходим в директорию
+- Клонируем репозиторий  (git clone https://github.com/dimik10/diplom_sprint3) и переходим в директорию monitoring_k8s
 Создаём namespace monitoring 
-Уставнавливаем через kubectl create -f . -n monitoring.
+
+Устанавливаем через kubectl create -f . -n monitoring
 
 
 - Подключаем всё к Grafana.
