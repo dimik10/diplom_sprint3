@@ -45,11 +45,12 @@ loki
 
 docker compose up -d 
 
-- Устанавливаем Loki в кластер k8s из helm chart:
+- Для мониторинга кластера k8s буду использовать проверенное решение на бaзе node-exporter т.к. оно легко 
+интегрируется в существующую концепцию. Отдельно прописываю только адреса node-exporter.
+- Клонируем репозиторий  (git clone https://github.com/dimik10/diplom_sprint3) и переходим в директорию
+Создаём namespace monitoring 
+Уставнавливаем через kubectl create -f . -n monitoring.
 
-  helm repo add bitnami https://charts.bitnami.com/bitnami -n monitoring 
-  helm repo update
-  helm install --namespace monitoring loki bitnami/grafana-loki --set global.dnsService=coredns --set spec.type=NodePort --set loki.auth_enabled=false
 
 - Подключаем всё к Grafana.
 из общего репозитория на сайте выбираем нужные дашборды.
@@ -60,5 +61,5 @@ https://grafana.com/grafana/dashboards/13639-logs-app/
 
 http://158.160.64.45:3000/
 
-- В docker-compouse.yaml файле на сервере srv вносим свои данные телеграмм, перезапускаем контейнер и моделируем срабатывание аллерта.
- либо отправляем письмо.
+- В docker-compouse.yaml файле на сервере srv-0 вносим свои данные телеграмм, перезапускаем контейнер и моделируем срабатывание аллерта.
+
