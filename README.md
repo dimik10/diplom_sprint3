@@ -65,3 +65,5 @@ https://grafana.com/grafana/dashboards/13639-logs-app/
 
 - В docker-compouse.yaml файле на сервере srv-0 вносим свои данные телеграмм, перезапускаем контейнер и моделируем срабатывание аллерта.
 
+- Резульаты доступны по адресу https://miro.com/app/board/uXjVPqxbhLI=/
+
