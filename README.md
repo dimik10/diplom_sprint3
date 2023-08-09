@@ -57,9 +57,8 @@ docker compose up -d
 https://grafana.com/grafana/dashboards/1860-node-exporter-full/
 https://grafana.com/grafana/dashboards/7587-prometheus-blackbox-exporter/
 https://grafana.com/grafana/dashboards/13639-logs-app/
-Адрес сервера графана:
 
-http://158.160.64.45:3000/
+- Адрес сервера графана: http://158.160.64.45:3000/
 
 - В docker-compouse.yaml файле на сервере srv-0 вносим свои данные телеграмм, перезапускаем контейнер и моделируем срабатывание аллерта.
 
